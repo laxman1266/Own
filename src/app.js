@@ -5,7 +5,7 @@ const app = express();
 const angDir = path.join(__dirname,"./testProject");
 app.use(express.static(angDir));
 app.get('/*',(req,res) => {
-    res.sendFile(angDir);
+    res.sendFile(angDir+'/index.html');
 })
 app.listen(port,()=> {
     console.log(`Server runs:${port}`)
